@@ -1,0 +1,19 @@
+[package]
+name = "hello_world_android"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+jni = "0.20"
+ndk-context = "0.1"
+# openssl = { version = "0.10.35", features = ["vendored"] }
+ndk-glue = "0.7" # Substitute this with the latest ndk-glue version you wish to use
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+
+[[package.metadata.android.uses_permission]]
+name = "android.permission.INTERNET"
